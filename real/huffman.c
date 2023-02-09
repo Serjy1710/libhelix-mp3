@@ -155,8 +155,8 @@ static int DecodeHuffmanPairs(int *xy, int nVals, int tabIdx, int bitsLeft, unsi
 				y = GetCWY(cw);		if (y)	{ApplySign(y, cache); cache <<= 1; cachedBits--;}
 
 				/* ran out of bits - should never have consumed padBits */
-				if (cachedBits < padBits)
-					return -1;
+				if (cachedBits < padBits) cachedBits = padBits;
+	//				return -1;
 
 				*xy++ = x;
 				*xy++ = y;
@@ -247,8 +247,8 @@ static int DecodeHuffmanPairs(int *xy, int nVals, int tabIdx, int bitsLeft, unsi
 				if (y)	{ApplySign(y, cache); cache <<= 1; cachedBits--;}
 
 				/* ran out of bits - should never have consumed padBits */
-				if (cachedBits < padBits)
-					return -1;
+				if (cachedBits < padBits) cachedBits = padBits;
+	//				return -1;
 
 				*xy++ = x;
 				*xy++ = y;
