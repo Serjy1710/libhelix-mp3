@@ -1,5 +1,6 @@
 Fixed-point MP3 decoder
 Developed by RealNetworks, 2003
+Fork by Serjy1710: fixed issue MP3Decode:ERR_MP3_INVALID_HUFFCODES on some MP3 files
 ===============================
 
 Overview
@@ -99,8 +100,8 @@ be ordered differently for optimization purposes, scaled differently, etc.
 
 IPP 
 --- 
-For certain platforms Intel® has created highly-optimized object code libraries of DSP 
-routines. These are called the Intel® Integrated Performance Primitives (IPP). If IPP 
+For certain platforms IntelÂ® has created highly-optimized object code libraries of DSP 
+routines. These are called the IntelÂ® Integrated Performance Primitives (IPP). If IPP 
 libraries are available for a platform, this MP3 decoder can link them in and use them 
 instead of the RealNetworks source code. To use IPP, you still need to build the top-level 
 files (mp3dec.c, mp3tabs.c). You also build the files in ipp/*.c. These are just thin 
@@ -110,12 +111,12 @@ included in this module. You must obtain them WITH A LICENSE directly from Intel
 Further info on the latest versions of IPP (as of the date of this readme) is available 
 from the URLs below
 
-Intel® Integrated Performance Primitives for the 
-Intel® PXA25x and PXA26x family of Processors, Version 3.0 
+IntelÂ® Integrated Performance Primitives for the 
+IntelÂ® PXA25x and PXA26x family of Processors, Version 3.0 
 * http://www.intel.com/design/pca/applicationsprocessors/swsup/IPPv30.htm
 
-Intel® Integrated Performance Primitives for 
-Intel® Pentium® Processors and Intel® Itanium® Architectures 
+IntelÂ® Integrated Performance Primitives for 
+IntelÂ® PentiumÂ® Processors and IntelÂ® ItaniumÂ® Architectures 
 * http://www.intel.com/software/products/ipp/ipp30/
 
 These sites explain how to obtain IPP and the terms under which IPP libraries may be used.
